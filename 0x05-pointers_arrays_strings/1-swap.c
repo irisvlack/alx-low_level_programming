@@ -1,34 +1,20 @@
 #include "main.h"
+#include <stdio.h>
+
 /**
- *_strncat - a function that concatenates two strings.
- *@dest: string that will receive the appending.
- *@src: string that will append to dest.
- *@n: The variable that determines the cut off point if it's less
- *than the string length.
- *Return: The new string will be returned.
+ * main - check the code
+ *
+ * Return: Always 0.
  */
-
-char *_strncat(char *dest, char *src, int n)
+int main(void)
 {
-	int i, a, b;
+    int a;
+    int b;
 
-	i = 0;
-	while (dest[i] != '\0')
-	{
-		i++;
-	}
-	a = 0;
-	while (src[a] != '\0')
-	{
-		a++;
-	}
-	b = a;
-	a = 0;
-	while (a < b && a < n)
-	{
-		dest[i] = src[a];
-		i++;
-		a++;
-	}
-	return (dest);
+    a = 98;
+    b = 42;
+    printf("a=%d, b=%d\n", a, b);
+    swap_int(&a, &b);
+    printf("a=%d, b=%d\n", a, b);
+    return (0);
 }
