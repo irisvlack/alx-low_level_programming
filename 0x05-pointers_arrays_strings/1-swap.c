@@ -1,25 +1,17 @@
-#include "main.h"
 #include <stdio.h>
-
+#include "main.h"
 /**
- * main - check the code
- *
- * Return: Always 0.
+ *swap_int - A function that swaps the values of two integers.
+ *@a: Holds the value of one integer.
+ *@b: Holds the value of the second integer.
+ *Return: The value 0 is returned.
  */
 
-void swap(int *a, int *b)
+void swap_int(int *a, int *b)
 {
-  int temp = *a;
-  *a = *b;
-  *b = temp;
+	int s;
+
+	s = *b;
+	*b = *a;
+	*a = s;
 }
-
-
-
-
-
-
-
-
-
-
