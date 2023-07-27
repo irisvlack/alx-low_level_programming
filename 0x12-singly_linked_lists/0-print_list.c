@@ -1,22 +1,24 @@
 #include "lists.h"
 #include <stdio.h>
+
 /**
- *print_list - a function that prints out the number of nodes, the length
- *of the word, and the string itself
- *@h: a pointer variable that takes the value of what's
- *being passed to print_list
- *Return: The number of elements
+ * print_list - print all elements of `list_t` list
+ * @h: head of linked list
+ * Return: number of nodes
  */
 size_t print_list(const list_t *h)
 {
-	int i;
+	const list_t *current;
+	size_t c;
 
-	i = 0;
-	if (h != NULL)
+	c = 0;
+	current = h;
+	while (current != NULL)
 	{
-		printf("[%d] %s\n", h->len, h->str);
-		i++;
-		i += print_list(h->next);
+		printf("[%d] %s\n", current->len, current->str);
+		current = current->next;
+		c++;
 	}
-	return (i);
+
+	return (c);
 }
